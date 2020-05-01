@@ -1,0 +1,31 @@
+{% extends "layouts/base-fullscreen.html" %}
+
+{% block title %} Offline UI {% endblock %} 
+
+{% block stylesheets %}
+
+<!-- Specific CSS goes HERE -->
+
+{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- [ offline-ui ] start -->
+    <div class="auth-wrapper offline">
+        <div class="text-center">
+            <h1 class="mb-4">OFFLINE</h1>
+            <h5 class="text-muted mb-4">Oops! Website Is Temporarily Offline</h5>
+            <form action="/">
+                <button class="btn btn-primary mb-4"><i class="feather icon-home"></i>Back to Home</button>
+            </form>
+        </div>
+    </div>
+    <!-- [ offline-ui ] end -->
+
+{% endblock content %}
+
+{% block javascripts %}
+
+<!-- Specific Page JS goes HERE  -->
+
+{% endblock javascripts %}
