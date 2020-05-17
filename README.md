@@ -19,7 +19,7 @@
 ## Dashboard Links
 
 - [Django Dashboard DattaAble PRO](https://appseed.us/admin-dashboards/django-dashboard-dattaable-pro) - Product page
-- [Django Dashboard DattaAble PRO](https://docs.appseed.us/admin-dashboards/django-dashboard-dattaable-pro/) - Documentation
+- [Django Dashboard DattaAble PRO](https://github.com/app-generator/django-dashboard-dattaable-pro/) - Documentation
 - [Django Dashboard DattaAble PRO](https://django-dashboard-dattaable-pro.appseed.us/) - LIVE demo
 
 <br />
