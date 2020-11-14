@@ -10,3 +10,8 @@ python-decouple
 gunicorn
 whitenoise
 psycopg2
+django-import-export
+forex_python
+pandas
+scipy
+sklearn

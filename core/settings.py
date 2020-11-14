@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'import_export',
     'app'  # Enable the inner app 
 ]
 
@@ -137,3 +138,5 @@ STATICFILES_DIRS = (
 )
 #############################################################
 #############################################################
+
+COMMAND_MAX_THREADS_COUNT = int(os.getenv("COMMAND_MAX_THREADS_COUNT", 0))
