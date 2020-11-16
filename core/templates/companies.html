@@ -1,0 +1,122 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Sample Page {% endblock %} 
+
+{% block stylesheets %}
+
+<!-- Specific CSS goes HERE -->
+
+{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-wrapper">
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <!-- [ breadcrumb ] start -->
+                    <div class="page-header">
+                        <div class="page-block">
+                            <div class="row align-items-center">
+                                <div class="col-md-12">
+                                    <div class="page-header-title">
+                                        <h5 class="m-b-10">Companies</h5>
+                                    </div>
+                                    <ul class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
+                                        <li class="breadcrumb-item"><a href="#!">Companies</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [ breadcrumb ] end -->
+                    <div class="main-body">
+                        <div class="page-wrapper">
+                            <!-- [ Main Content ] start -->
+                            <div class="row">
+                                <!-- [ sample-page ] start -->
+                                <div class="col-sm-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5>Welcome!</h5>
+                                            <div class="card-header-right">
+                                                <div class="btn-group card-option">
+                                                    <button type="button" class="btn dropdown-toggle btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <i class="feather icon-more-horizontal"></i>
+                                                    </button>
+                                                    <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                                        <li class="dropdown-item full-card"><a href="#!"><span><i class="feather icon-maximize"></i> maximize</span><span style="display:none"><i class="feather icon-minimize"></i> Restore</span></a></li>
+                                                        <li class="dropdown-item minimize-card"><a href="#!"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+                                                        <li class="dropdown-item reload-card"><a href="#!"><i class="feather icon-refresh-cw"></i> reload</a></li>
+                                                        <li class="dropdown-item close-card"><a href="#!"><i class="feather icon-trash"></i> remove</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-block">
+                                            <p>Here you will find the most exciting companies you've ever seen.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- [ Responsive table ] start -->
+                                <div class="col-sm-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5>Responsive</h5>
+                                        </div>
+                                        <div class="card-block">
+                                            <h6>Basic Responsive</h6>
+                                            <hr>
+                                            <div class="table-responsive">
+                                                <table id="responsive-table" class="display table dt-responsive nowrap" style="width:100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>#</th>
+                                                            <th>Company</th>
+                                                            <th>Stock Price</th>
+                                                            <th>PER TTM</th>
+                                                            <th>PER NTM</th>
+                                                            <th>PEG</th>
+                                                            <th>Fair Price</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        {% if companies_list %}
+                                                        {% for company in companies_list %}
+                                                        <tr>
+                                                                <th scope="row">{{ forloop.counter }}</th>
+                                                                    <td><a href={{company.ticker}}>{{company.ticker}}</a></td>
+                                                                    <td>{{company.stock_price}}</td>
+                                                                    <td>{{company.per_ttm}}</td>
+                                                                    <td>{{company.per_forward}}</td>
+                                                                    <td>{{company.peg}}</td>
+                                                                    <td>{{company.wall_street_target_price}}</td>
+                                                        </tr>
+                                                        {% endfor %}
+                                                            {% else %}
+                                                                <p>Companies not available</p>
+                                                            {% endif %}
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                <!-- [ sample-page ] end -->
+                            </div>
+                            <!-- [ Main Content ] end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- [ Main Content ] end -->
+
+{% endblock content %}
+
+{% block javascripts %}
+
+<!-- Specific Page JS goes HERE  -->
+
+{% endblock javascripts %}

@@ -10,9 +10,24 @@ from django.template import loader
 from django.http import HttpResponse
 from django import template
 
+from .models import Company
+
 @login_required(login_url="/login/")
 def index(request):
     return render(request, "index.html")
+
+@login_required(login_url="/login/")
+def companies(request):
+
+    companies_list = Company.objects.all()
+
+    context = {
+        "companies_list" : companies_list
+    }
+
+    html_template = loader.get_template("companies.html")
+
+    return HttpResponse(html_template.render(context, request))
 
 @login_required(login_url="/login/")
 def pages(request):
